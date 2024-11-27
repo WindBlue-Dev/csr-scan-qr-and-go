@@ -1,0 +1,166 @@
+:root {
+    --r: 35px;
+}
+.t-primary{
+    color:#002c8d!important;
+}
+body {
+    background-image: url("../../images/background.jpg");
+    color: #fff;
+    background-color: #002c8d;
+    background-size: cover;
+    background-repeat: no-repeat;background-attachment: fixed;
+    background-position: center top;
+}
+.modal-content {
+    max-width: 470px!important;
+}
+.qr-container {
+    width: 100%;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+.lable-term {
+    color: #2948ff;
+    font-size: 0.8em;
+}
+.terms {
+    display: inline-flex;
+    flex: 0 0 100%;
+    padding: 15px;
+}
+.terms input {
+    margin-right: 10px;
+}
+.wb_consen {
+    padding: 15px;
+    font-size:0.9em;
+}
+.wb_consen a {
+    font-size:0.9em;
+}
+.qr-box {
+    padding: 1.5rem;
+}
+.container{
+    padding-left:20px!important;
+    padding-right:20px!important;
+}
+tr,td{color:#fff;}
+H1,
+H2,
+H3,
+H4,
+H5,
+H6,input {
+    font-family: kanit;
+}
+
+.mar-t {
+    margin-top: 25px;
+}
+
+.text-c {
+    text-align: center;
+}
+
+.grid-content {
+    display: grid;
+    margin: 15px auto;
+    padding: 5px 15px;
+}
+
+.tc-white {
+    color: #fff;
+}
+.kanit{
+    font-family: kanit;
+}
+button {
+    background: #00cf1c;
+    color: #fff;
+    font-family: kanit;
+    border: 0;
+    padding: 15px 0;
+    border-radius: var(--r);
+    margin: 10px 0 15px;
+}
+
+button:hover {
+    background: #2041ff;
+    color: #ff7700;
+}
+.wb_btn {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.input {
+    border-radius: var(--r);
+    border: 0;
+    padding: 15px 25px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    max-width: 100%;
+    margin-bottom: 25px;
+}
+.row {
+    --bs-gutter-x: 0;
+}
+.msg {
+    padding: 25px 20px;
+    color: #002c8d;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px #000000;
+}
+.small-text, li{
+    font-size:0.9em;
+}
+.text-shadow{
+    text-shadow:3px 0 3px #000000;
+}
+.lable{
+    color: #2041ff;
+    margin-left:5px;
+}
+.bg-chk {
+    display: flex;
+    padding: 25px 15px 15px;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 15px;
+}
+.chk-box{
+    width: 50%;
+    font-family:"kanit";
+    font-weight:400px;
+}
+.blue{
+    color: #002c8d;
+}
+.mar0{
+    margin:0;
+}
+.otp-overlay {
+    height: 100vh;
+    width: 100vw;
+    background: #000000d9;
+    position: fixed;
+}
+#vertify-otp {
+    margin: 0 auto;
+    margin-top: calc(100%);
+    padding: 15px;
+    background: #fff;
+    width: 90%;
+}

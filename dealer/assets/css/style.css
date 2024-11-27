@@ -1,0 +1,166 @@
+body {
+    background-image: url("../../images/background.jpg");
+    color: #fff;
+    background-color: #853d07;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    box-sizing: border-box;
+}
+
+H1,
+H2,
+H3,
+H4,
+H5,
+H6,
+input,
+th {
+    font-family: kanit;
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm {
+    width: 100%;
+}
+
+.wb_table {
+    margin: 0 10px 10px 15px;
+}
+
+.border0 {
+    border: 0;
+    color: #002c8d;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wb-flex-box {
+    border-radius: 15px;
+    padding-top: 35px;
+}
+
+.kanit {
+    font-family: kanit;
+}
+
+.h5 {
+    text-align: left;
+    width: 100%;
+}
+
+td {
+    padding: 5px 10px;
+}
+
+table {
+    margin: 25px 0;
+    width: 100%;
+}
+
+.wb_cover {
+    height: 100vh;
+}
+
+.wb_consen {
+    padding: 15px;
+    font-size: 0.9em;
+    position: absolute;
+    bottom: 0;
+}
+
+a {
+    font-size: 0.9em;
+}
+
+.blue {
+    color: #002c8d;
+    width: 100%;
+}
+
+.logo {
+    max-width: 100%;
+    display: block;
+    margin: 35px auto 20px;
+}
+
+.wb_result {
+    border: 0px;
+}
+
+.wb-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.pb15 {
+    padding-bottom: 15px;
+}
+
+.wb-container {
+    padding: 15px;
+    background: #fff;
+}
+
+.wb-w-box {
+    background: #fff;
+    padding: 25px 15px;
+    border-radius: 15px;
+    color: #002c8d !important;
+    margin: 5px auto;
+}
+
+button {
+    background: #00cf1c;
+    color: #fff;
+    font-family: kanit;
+    border: 0;
+    padding: 15px 0;
+    border-radius: 35px;
+    margin: 10px 0 15px;
+}
+
+button:hover {
+    background: #18ff37;
+    color: #ffffff;
+}
+
+.wb_btn {
+    width: 100%;
+    margin: 25px 0;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.wb_btn_try {
+    background: #00cf1c;
+    color: #fff;
+    font-family: kanit;
+    border: 0;
+    padding: 15px 0;
+    border-radius: 35px;
+    margin: 10px 0 15px;
+}
+
+.f20 {
+    font-size: 20px;
+}
+
+.fw {
+    color: #fff;
+}
+
+.p_static {
+    position: relative;
+}
