@@ -41,6 +41,7 @@ require_once "assets/util.php";
                     <h5 class=blue>STEP 1 รายละเอียดผู้รับสิทธิ์</h5>
 
                     <form action="insert.php" method="post" enctype="multipart/form-data">
+                        <input type="text" name="ref" id="refInput" value="random">
                         <input type="hidden" name="dealer" value="<?php echo $_SESSION['dealer']; ?>">
                         <table class=wb_table>
                             <tbody>
@@ -87,10 +88,11 @@ require_once "assets/util.php";
             </div>
         </div>
         <script src="assets/js/main.js"></script>
-        
+
         <script>
             let imgInput = document.getElementById('imgInput');
             let previewImg = document.getElementById('previewImg');
+            const RefCode = docment.getElementById("refcode")
 
             imgInput.onchange = evt => {
                 const [file] = imgInput.files;
@@ -98,6 +100,20 @@ require_once "assets/util.php";
                     previewImg.src = URL.createObjectURL(file)
                 }
             }
+
+            // ฟังก์ชันในการดึงรหัสอ้างอิงจากเซิร์ฟเวอร์
+            async function fetchRefCode() {
+                try {
+                    const response = await fetch("action.php?ref");
+                    const data = await response.json();
+                    document.getElementById("refInput").value = data.ref;
+                } catch (error) {
+                    console.error('Error fetching ref code:', error);
+                }
+            }
+
+            // เรียกใช้ฟังก์ชันเมื่อหน้าเว็บโหลด
+            document.addEventListener("DOMContentLoaded", fetchRefCode);
         </script>
     <?php } ?>
 </body>

@@ -2,7 +2,7 @@
 
 require_once "assets/db.php";
 require_once "assets/util.php";
-
+require_once 'assets/config.php';
 $db = new Database();
 $util = new Util();
 
@@ -28,7 +28,7 @@ if (isset($_GET['login'])) {
     $sname = $util->testInput($_POST['sname']);
     $phone = $_POST['phone'];
     $branch = $_POST['branch'];
-    
+
     if ($db->chkDealer($phone)) {
         if ($db->insdealer($sname, $phone, $branch)) {
             $_SESSION['dealer'] = $phone;
@@ -43,4 +43,24 @@ if (isset($_GET['login'])) {
         echo $util->showMessage("success", "ท่านเคยลงทะเบียนไว้แล้ว");
     }
 }
-?>
+
+
+if (isset($_GET['ref'])) {
+    function getUniqueRef($conn)
+    {
+        do {
+            $ref = substr(str_shuffle("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"), 0, 10);
+            $query = "SELECT COUNT(*) as count FROM promo_usage WHERE ref_code='$ref'";
+            $stmt = $conn->query($query);
+            $row = $stmt->fetch();
+        } while ($row['count'] > 0);
+
+        return $ref;
+    }
+
+    // สร้างอินสแตนซ์ของ Config และดึงการเชื่อมต่อ
+    $config = new Config();
+    $conn = $config->getConnection();
+
+    echo json_encode(["ref" => getUniqueRef($conn)]);
+}
