@@ -41,7 +41,7 @@ require_once "assets/util.php";
                     <h5 class=blue>STEP 1 รายละเอียดผู้รับสิทธิ์</h5>
 
                     <form action="insert.php" method="post" enctype="multipart/form-data">
-                        <input type="text" name="ref" id="refInput" value="random">
+                        <input type="text" name="ref" id="refcode" value="">
                         <input type="hidden" name="dealer" value="<?php echo $_SESSION['dealer']; ?>">
                         <table class=wb_table>
                             <tbody>
@@ -106,7 +106,7 @@ require_once "assets/util.php";
                 try {
                     const response = await fetch("action.php?ref");
                     const data = await response.json();
-                    document.getElementById("refInput").value = data.ref;
+                    document.getElementById("refcode").value = data.ref;
                 } catch (error) {
                     console.error('Error fetching ref code:', error);
                 }
